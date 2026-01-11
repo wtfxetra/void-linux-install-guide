@@ -341,12 +341,12 @@ $ <b>sudo xbps-install Thunar</b>
 <div></div>
 <i># You will most probably need these apps for Niri</i>
 <div></div>
-$ <b>sudo xbps-install Waybar</b>      <i># nice statusbar for i3-based UIs</i>
+$ <b>sudo xbps-install Waybar</b>      <i># nice statusbar for wayland</i>
 $ <b>sudo xbps-install rofi</b>         <i># like dmenu, but more customizable</i>
 $ <b>sudo xbps-install alacritty</b>    <i># terminal emulator</i>
 $ <b>sudo xbps-install foot</b>        <i># lightweight terminal emulator</i>
 $ <b>sudo xbps-install fnott</b>        <i># notification manager</i>
-$ <b>sudo xbps-install swww</b>          <i># fast and light image viewer</i>
+$ <b>sudo xbps-install swww</b>          <i># fast and light wallpaper utility</i>
 $ <b>sudo xbps-install xdg-desktop-portal-gtk</b>     <i># desktop Portal</i>
 $ <b>sudo xbps-install xdg-user-dirs</b>     <i># user dir setup</i>
 $ <b>sudo xbps-install yazi</b>         <i># console file manager</i>
