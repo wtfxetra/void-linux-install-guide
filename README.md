@@ -6,7 +6,7 @@
 
 </div>
 
-<h1 align="center">Void Linux Installation Guide</h1>
+<h1 align="center">Void Linux Installation Guide x86_64 [AMD]</h1>
 
 <div align="center">
     <i>How to install Void Linux</i>
