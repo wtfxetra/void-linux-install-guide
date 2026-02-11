@@ -364,10 +364,9 @@ $ sudo xbps-install mesa-vdpau
 
 <div></div>
 ## Intel
-
 $ sudo xbps-install mesa-vulkan-intel
 $ sudo xbps-install intel-video-accel
----
+
 
 <div></div>
 <div></div>
