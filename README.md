@@ -437,7 +437,7 @@ $ <b>reboot</b>
 <dl><dd><pre>
 $ git clone https://github.com/wtfxetra/dotfiles
 $ cd dotfiles
-$ stow *
+$ ./install.sh
 </pre></dd></dl>
 
 ### Start Niri
