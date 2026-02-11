@@ -336,17 +336,48 @@ $ <b>sudo xbps-install rsync</b>             <i># File copying tool for remote a
 <pre>
 <i># Instructions for installing Niri</i>
 <div></div>
-$ <b>sudo xbps-install niri</b>
-$ <b>sudo xbps-install nautilus</b>
-$ <b>sudo xbps-install Waybar</b>      <i># nice statusbar for wayland</i>
-$ <b>sudo xbps-install fuzzel</b>         <i># like dmenu, but more customizable</i>
-$ <b>sudo xbps-install alacritty</b>    <i># terminal emulator</i>
-$ <b>sudo xbps-install foot</b>        <i># lightweight terminal emulator</i>
-$ <b>sudo xbps-install fnott</b>        <i># notification manager</i>
-$ <b>sudo xbps-install swww</b>          <i># fast and light wallpaper utility</i>
-$ <b>sudo xbps-install xdg-desktop-portal-gtk</b>     <i># desktop Portal</i>
-$ <b>sudo xbps-install xdg-user-dirs</b>     <i># user dir setup</i>
-$ <b>sudo xbps-install yazi</b>         <i># console file manager</i>
+## Wayland / Niri Setup (Void Linux)
+
+$ sudo xbps-install niri
+$ sudo xbps-install nautilus
+$ sudo xbps-install waybar          # nice statusbar for wayland
+$ sudo xbps-install fuzzel          # like dmenu, but more customizable
+$ sudo xbps-install alacritty       # terminal emulator
+$ sudo xbps-install foot            # lightweight terminal emulator
+$ sudo xbps-install fnott           # notification manager
+$ sudo xbps-install swww            # fast and light wallpaper utility
+$ sudo xbps-install xdg-desktop-portal-gtk   # desktop portal
+$ sudo xbps-install xdg-user-dirs   # user dir setup
+$ sudo xbps-install yazi            # console file manager
+
+---
+
+## Graphics Stack (Common)
+
+
+$ sudo xbps-install mesa
+$ sudo xbps-install mesa-dri
+$ sudo xbps-install vulkan-loader
+
+---
+
+## For AMD GPUs
+
+
+$ sudo xbps-install mesa-vulkan-radeon
+$ sudo xbps-install mesa-vaapi
+$ sudo xbps-install mesa-vdpau
+
+
+---
+
+## For Intel GPUs
+
+
+$ sudo xbps-install mesa-vulkan-intel
+$ sudo xbps-install intel-video-accel
+---
+
 <div></div>
 <div></div>
 </pre>
