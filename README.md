@@ -163,7 +163,7 @@ $ <b>mount /dev/nvme0n1p1 /mnt/boot/efi</b>
 
 <dl><dd>
 <pre>
-$ <b>XBPS_ARCH=x86_64 xbps-install -Sy -r /mnt -R "https://repo-default.voidlinux.org/current" base-system vim iwd seatd</b>
+$ <b>XBPS_ARCH=x86_64 xbps-install -Sy -r /mnt -R "https://repo-default.voidlinux.org/current" base-system vim iwd elogind</b>
 $ <b>xgenfstab -U /mnt > /mnt/etc/fstab</b>
 </pre>
 </dd></dl>
@@ -206,7 +206,7 @@ $ <b>echo <i>yourhostname</i> > /etc/hostname</b>
 
 <dl><dd>
 <pre>
-$ <b>useradd -m -G wheel,storage,audio,video,optical,users,_seatd yourusername</i></b>
+$ <b>useradd -m -G wheel,storage,audio,video,optical,users yourusername</i></b>
 $ <b>passwd root</b>
 $ <b>passwd <i>yourusername</i></b>
 </pre>
@@ -263,8 +263,7 @@ $ <b>sudo ln -sv /etc/sv/acpid /var/service</b>
 $ <b>sudo ln -sv /etc/sv/dhcpcd /var/service</b>
 $ <b>sudo ln -sv /etc/sv/dbus /var/service</b>
 $ <b>sudo ln -sv /etc/sv/iwd /var/service</b>
-$ <b>sudo ln -sv /etc/sv/seatd /var/service</b>
-
+$ <b>sudo ln -sv /etc/sv/elogind /var/service</b>
 $ logout
 </pre>
 ### Login Back
@@ -349,30 +348,23 @@ $ sudo xbps-install swww            # fast and light wallpaper utility
 $ sudo xbps-install xdg-desktop-portal-gtk   # desktop portal
 $ sudo xbps-install xdg-user-dirs   # user dir setup
 $ sudo xbps-install yazi            # console file manager
-
----
-
-## Graphics Stack (Common)
-
+<div></div>
+## GFX
 
 $ sudo xbps-install mesa
 $ sudo xbps-install mesa-dri
 $ sudo xbps-install vulkan-loader
 
----
-
-## For AMD GPUs
-
+<div></div>
+## AMD
 
 $ sudo xbps-install mesa-vulkan-radeon
 $ sudo xbps-install mesa-vaapi
 $ sudo xbps-install mesa-vdpau
 
 
----
-
-## For Intel GPUs
-
+<div></div>
+## Intel
 
 $ sudo xbps-install mesa-vulkan-intel
 $ sudo xbps-install intel-video-accel
@@ -388,8 +380,8 @@ $ sudo xbps-install intel-video-accel
 
 <dl><dd>
 <pre>
-$ <b>sudo xbps-install ttf-dejavu ttf-freefont ttf-liberation ttf-droid terminus-font</b>
-$ <b>sudo xbps-install noto-fonts noto-fonts-emoji ttf-ubuntu-font-family ttf-roboto ttf-roboto-mono ttf-ibm-plex</b>
+$ <b>sudo xbps-install ttf-dejavu</b>
+$ <b>sudo xbps-install noto-fonts-ttf noto-fonts-emoji</b>
 </pre>
 </dd></dl>
 
@@ -428,20 +420,8 @@ $ <b>sudo xbps-install adwaita-icon-theme papirus-icon-theme</b>
 </pre>
 </dd></dl>
 
-10. Setup XDG_RUNTIME
 
-<dl><dd>
-<pre>
-$ <b>sudo xbps-install pam_rundir</b>
-$ <b>sudo vim /etc/pam.d/login</b>
-     # Append to end of file
-     -session	optional	pam_rundir.so
-     # Save ,Exit
-$
-</pre>
-</dd></dl>
-
-11. Setup Pipewire
+10. Setup Pipewire
 
 <dl><dd><pre>
 $ <b># mkdir -p /etc/pipewire/pipewire.conf.d</b>
@@ -453,15 +433,13 @@ $ <b># ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d</b>
 $ <b># ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d</b>
 </pre></dd></dl>
 
-12. Reboot to finalize installation:
+11. Reboot to finalize installation:
 
 <dl><dd>
 <pre>
 $ <b>reboot</b>
 </pre>
 </dd></dl>
-
-
 
 
 ### [Optional] Dotfiles:
