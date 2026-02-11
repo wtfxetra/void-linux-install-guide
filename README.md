@@ -337,12 +337,9 @@ $ <b>sudo xbps-install rsync</b>             <i># File copying tool for remote a
 <i># Instructions for installing Niri</i>
 <div></div>
 $ <b>sudo xbps-install niri</b>
-$ <b>sudo xbps-install Thunar</b>
-<div></div>
-<i># You will most probably need these apps for Niri</i>
-<div></div>
+$ <b>sudo xbps-install nautilus</b>
 $ <b>sudo xbps-install Waybar</b>      <i># nice statusbar for wayland</i>
-$ <b>sudo xbps-install rofi</b>         <i># like dmenu, but more customizable</i>
+$ <b>sudo xbps-install fuzzel</b>         <i># like dmenu, but more customizable</i>
 $ <b>sudo xbps-install alacritty</b>    <i># terminal emulator</i>
 $ <b>sudo xbps-install foot</b>        <i># lightweight terminal emulator</i>
 $ <b>sudo xbps-install fnott</b>        <i># notification manager</i>
@@ -351,21 +348,12 @@ $ <b>sudo xbps-install xdg-desktop-portal-gtk</b>     <i># desktop Portal</i>
 $ <b>sudo xbps-install xdg-user-dirs</b>     <i># user dir setup</i>
 $ <b>sudo xbps-install yazi</b>         <i># console file manager</i>
 <div></div>
-<i># additionals to yazi:</i>
 <div></div>
 </pre>
 </dd></dl>
 
-6. [Optional] Install login session manager
 
-<dl><dd>
-<pre>
-$ <b>sudo xbps-install sddm</b>
-$ <b>sudo ln -sv /etc/sv/sddm /var/service</b>
-</pre>
-</dd></dl>
-
-7. Install essential system fonts:
+6. Install essential system fonts:
 
 <dl><dd>
 <pre>
@@ -374,7 +362,7 @@ $ <b>sudo xbps-install noto-fonts noto-fonts-emoji ttf-ubuntu-font-family ttf-ro
 </pre>
 </dd></dl>
 
-8. Enable sound support on your PC:
+7. Enable sound support on your PC:
 
 <dl><dd>
 <pre>
@@ -388,7 +376,7 @@ $ <b>sudo xbps-install wiremix</b>         # PipeWire CLI UI
 </dd></dl>
 
 
-9. [Optional] Improve battery usage with TLP - utility that basically does kernel settings
+8. [Optional] Improve battery usage with TLP - utility that basically does kernel settings
     tweaking that improve power consumption. More information about TLP
     [can be found here](https://linrunner.de/tlp/). More information about TLP-RDW (radio device wizard)
     [can be found here](https://linrunner.de/tlp/settings/rdw.html).
@@ -401,7 +389,7 @@ $ <b>sudo ln -sv /etc/sv/tlp /var/service</b>
 </pre>
 </dd></dl>
 
-10. [Optional] Install GTK themes and icons:
+9. [Optional] Install GTK themes and icons:
 
 <dl><dd>
 <pre>
@@ -409,7 +397,7 @@ $ <b>sudo xbps-install adwaita-icon-theme papirus-icon-theme</b>
 </pre>
 </dd></dl>
 
-11. Setup XDG_RUNTIME
+10. Setup XDG_RUNTIME
 
 <dl><dd>
 <pre>
@@ -422,7 +410,7 @@ $
 </pre>
 </dd></dl>
 
-12. Setup Pipewire
+11. Setup Pipewire
 
 <dl><dd><pre>
 $ <b># mkdir -p /etc/pipewire/pipewire.conf.d</b>
@@ -434,7 +422,7 @@ $ <b># ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d</b>
 $ <b># ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d</b>
 </pre></dd></dl>
 
-14. Reboot to finalize installation:
+12. Reboot to finalize installation:
 
 <dl><dd>
 <pre>
@@ -443,44 +431,6 @@ $ <b>reboot</b>
 </dd></dl>
 
 
-
-
-<h1 align="center">
-    Section 03: Installing third-party apps and <br>
-    setting up dev environment
-</h1>
-<div align="center">
-</div>
-
-### Step 01: General-purpose apps
-
-<dl><dd>
-<pre>
-$ <b>sudo xbps-install libreoffice</b>       <i># office packages</i>
-$ <b>sudo xbps-install gimp</b>              <i># image editor</i>
-$ <b>sudo xbps-install gparted</b>           <i># disk management tool</i>
-$ <b>sudo xbps-install obs</b>        <i># screencasting and streaming app</i>
-$ <b>sudo xbps-install telegram-desktop</b>  <i># my preferred messenger</i>
-$ <b>sudo xbps-install mpv</b>               <i># media player</i>
-</pre>
-</dd></dl>
-
-
-### Step 02: Software development tools
-
-1. General purpose development tools:
-
-<dl><dd>
-<pre>
-$ <b>sudo xbps-install neovim</b>          <i># powerful console editor</i>
-$ <b>sudo xbps-install zed</b>             <i># ultimate graphical editor</i>
-$ <b>sudo xbps-install tree-sitter</b>     <i># parsing system for programming tools</i>
-$ <b>sudo xbps-install stow</b>            <i># configuration manager</i>
-$ <b>sudo xbps-install tmux</b>            <i># terminal session multiplexer</i>
-$ <b>sudo xbps-install nmap</b>            <i># network scanner with advanced features</i>
-$ <b>sudo xbps-install apache</b>          <i># http server + some useful utilities</i>
-</pre>
-</dd></dl>
 
 
 ### [Optional] Dotfiles:
