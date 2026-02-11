@@ -259,7 +259,6 @@ $ <b>reboot</b>
 
 <dl><dd>
 <pre>
-$ <b>sudo ln -sv /etc/sv/acpid /var/service</b>
 $ <b>sudo ln -sv /etc/sv/dhcpcd /var/service</b>
 $ <b>sudo ln -sv /etc/sv/dbus /var/service</b>
 $ <b>sudo ln -sv /etc/sv/iwd /var/service</b>
